@@ -129,8 +129,8 @@ public class IntList {
     System.out.println(L.get(0));
     System.out.println(L.get(1));
     System.out.println(L.get(2));
-    IntList list1 = incrList(L,5);
-    IntList list2 = dincrList(L,5);
+    IntList list1 = IntList.incrList(L,5);
+    IntList list2 = IntList.dincrList(L,5);
     System.out.println(list1.toString());
     System.out.println(list2.toString());
     //Check if the original list changes
