@@ -17,6 +17,15 @@ public class IntList {
   }
 
   /**
+   * Add a new integer element to the IntList.
+   * @param x an integer, indicates the new element
+   */
+  public void add(int x) {
+    rest = new IntList(first, rest);
+    first = x;
+  }
+
+  /**
    * Return the size of the list using recursion!
    * @return an integer, indicates the size of the list
    */
@@ -122,15 +131,17 @@ public class IntList {
    */
   public static void main(String[] args) {
     IntList L = new IntList(15, null);
-    L = new IntList(10, L);
-    L = new IntList(5, L);
+    L.add(10);
+    L.add(5);
+    //L = new IntList(10, L);
+    //L = new IntList(5, L);
     System.out.println(L.size());
     System.out.println(L.iterativeSize());
     System.out.println(L.get(0));
     System.out.println(L.get(1));
     System.out.println(L.get(2));
-    IntList list1 = IntList.incrList(L,5);
-    IntList list2 = IntList.dincrList(L,5);
+    IntList list1 = IntList.incrList(L,15);
+    IntList list2 = IntList.dincrList(L,15);
     System.out.println(list1.toString());
     System.out.println(list2.toString());
     //Check if the original list changes
