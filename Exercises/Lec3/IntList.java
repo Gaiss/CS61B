@@ -17,6 +17,53 @@ public class IntList {
   }
 
   /**
+   * If 2 numbers in a row are the same, we add them together and make one large node.
+   */
+  public void addAdjacent(){
+    //Initialize a IntList object to store the current
+    IntList p = this;
+    //Check if p is null
+    if (p == null) {
+      return;
+    }
+    //Loop if p.rest is not null
+    while(p.rest != null) {
+      //If 2 numbers in a row are same
+      if(p.first == p.rest.first) {
+        //Add them together and make one large node
+        p.first *= 2;
+        p.rest = p.rest.rest;
+      }
+      //Continue check rest parts
+      else {
+        p = p.rest;
+      }
+    }
+  }
+
+  /** Square Insertion */
+  public void addLastAndSquare(int x) {
+    //Initialize a IntList object to store the current
+    IntList p = this;
+    //Loop if p.rest is not null
+    while (p.rest != null) {
+      //Create a squareNode
+      IntList squareNode = new IntList(p.first * p.first, p.rest);
+      //Add together
+      p.rest = squareNode;
+      //Check next original node
+      p = p.rest.rest;
+    } /* p stops at the last node */
+    /* add node of x */
+    IntList newNode = new IntList(x, null);
+    /* square the last node  */
+    IntList squareNode = new IntList(p.first * p.first, newNode); /* p.rest is null */
+    p.rest = squareNode;
+    /* if use while (p != null), need an extra pointer to the previous node (to remember) */
+    //size += 1;
+  }
+
+  /**
    * Add a new integer element to the IntList.
    * @param x an integer, indicates the new element
    */
@@ -130,21 +177,13 @@ public class IntList {
    * @param args
    */
   public static void main(String[] args) {
-    IntList L = new IntList(15, null);
-    L.add(10);
-    L.add(5);
-    //L = new IntList(10, L);
-    //L = new IntList(5, L);
+    IntList L = new IntList(4, null);
+    L.add(2);
+    L.add(1);
+    L.add(1);
+    System.out.println(L);
+    L.addLastAndSquare(10);
     System.out.println(L.size());
-    System.out.println(L.iterativeSize());
-    System.out.println(L.get(0));
-    System.out.println(L.get(1));
-    System.out.println(L.get(2));
-    IntList list1 = IntList.incrList(L,15);
-    IntList list2 = IntList.dincrList(L,15);
-    System.out.println(list1.toString());
-    System.out.println(list2.toString());
-    //Check if the original list changes
-    System.out.println(L.toString());
+    System.out.println(L);
   }
 }
