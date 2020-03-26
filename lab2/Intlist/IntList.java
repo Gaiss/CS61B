@@ -11,11 +11,11 @@ public class IntList {
     /**
      * First element of list.
      */
-    public int first;
+    private int first;
     /**
      * Remaining elements of list.
      */
-    public IntList rest;
+    private IntList rest;
 
     /**
      * A List with first FIRST0 and rest REST0.
@@ -81,14 +81,17 @@ public class IntList {
      */
 
     public static IntList dcatenate(IntList A, IntList B) {
-        //TODO:  fill in method
+        //First check if A is null
         if (A == null) {
             return B;
         }
+        //Initialize an IntList pointer to store A's reference
         IntList pointer = A;
-        while(pointer.rest != null) {
+        //Use while loop to go to the last node
+        while (pointer.rest != null) {
             pointer = pointer.rest;
         }
+        //Let A followed by B
         pointer.rest = B;
         return A;
     }
@@ -98,18 +101,23 @@ public class IntList {
      * * elements of B.  May NOT modify items of A.  Use 'new'.
      */
     public static IntList catenate(IntList A, IntList B) {
-        //TODO:  fill in method
+        //First check if A is null
         if (A == null) {
             return B;
         }
+        //Initialize an IntList pointer C to store A's first data
         IntList C = new IntList(A.first, null);
+        //Initialize an IntList pointer to store A's reference
         IntList pointerA = A;
+        //Initialize an IntList pointer to store C's reference
         IntList pointerC = C;
-        while(pointerA.rest != null) {
+        //Use while loop to copy each A node to C node
+        while (pointerA.rest != null) {
             pointerC.rest = new IntList(pointerA.rest.first, null);
             pointerA = pointerA.rest;
             pointerC = pointerC.rest;
         }
+        //Let A followed by B
         pointerC.rest = B;
         return C;
     }
