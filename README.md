@@ -6,8 +6,6 @@ Self-study for CS61B<br>
 - [Background](#background)
 - [Install](#install)
 - [Usage](#usage)
-- [API](#api)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Background<br>
@@ -25,4 +23,4 @@ You can check all answers for CS61B 18spring in this repo.(Although all of them 
 
 ## License
 
-[MIT © Yunxiang Li.](../LICENSE)
+[MIT © Richard McRichface.](../LICENSE)
