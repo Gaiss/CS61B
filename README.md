@@ -31,4 +31,4 @@ You can check all answers for CS61B 18spring in this repo.(Although all of them 
 
 ## License
 
-[MIT license](https://github.com/RichardLitt/standard-readme/blob/master/LICENSE)
+[MIT license](https://github.com/Yunxiang-Li/CS61B/blob/master/LICENSE)
