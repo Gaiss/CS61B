@@ -1,11 +1,15 @@
 # CS61B
 Self-study for CS61B<br>
 [CS61B 2018 spring](https://sp18.datastructur.es/)
+
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
 ## Table of Contents
 
 - [Background](#background)
 - [Install](#install)
 - [Usage](#usage)
+- [Maintainers](#maintainers)
 - [License](#license)
 
 ## Background<br>
