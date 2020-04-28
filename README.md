@@ -17,7 +17,7 @@ I just want to learn Java,OOP, data structures and algorithm form CS61B so that 
 
 ## Install
 
-This project uses Java and an IDE.
+I learn CS61B with Java and IntelliJ(an IDE).<br>
 [Java Download](https://www.java.com/ES/download/)<br>
 [IntelliJ IDEA Download](https://www.jetbrains.com/idea/download/#section=windows)<br>
 You may also need to do some customized modifications.
