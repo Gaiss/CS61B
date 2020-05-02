@@ -44,7 +44,7 @@ public class SLList {
 
   /**
    * Third constructor, with an array argument.
-   * @param array an array obejct
+   * @param array an array object
    */
   public SLList(int[] array) {
     //Initialize sentinel and size instance variables
@@ -113,14 +113,14 @@ public class SLList {
     System.out.println(L.size());
     System.out.println(L.getFirst());
     /**
-    SLList L = new SLList();
-    L.addFirst(15);
-    L.addFirst(10);
-    L.addFirst(5);
-    L.deleteFirst();
-    L.deleteFirst();
-    System.out.println(L.size());
-    System.out.println(L.getFirst());
+     SLList L = new SLList();
+     L.addFirst(15);
+     L.addFirst(10);
+     L.addFirst(5);
+     L.deleteFirst();
+     L.deleteFirst();
+     System.out.println(L.size());
+     System.out.println(L.getFirst());
      */
   }
 }
